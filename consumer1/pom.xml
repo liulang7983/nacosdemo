@@ -34,17 +34,6 @@
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-openfeign</artifactId>
         </dependency>
-        <!-- 新增 Ribbon 核心依赖（解决 IClientConfig 缺失） -->
-        <dependency>
-            <groupId>com.netflix.ribbon</groupId>
-            <artifactId>ribbon-core</artifactId>
-            <version>2.7.18</version> <!-- 兼容 Spring Cloud 2021.0.1 的版本 -->
-        </dependency>
-        <!-- 新增 Ribbon 核心依赖（解决 AbstractLoadBalancerRule 缺失） -->
-        <dependency>
-            <groupId>com.netflix.ribbon</groupId>
-            <artifactId>ribbon-loadbalancer</artifactId>
-            <version>2.7.18</version> <!-- 兼容 Spring Cloud 2021.0.1 的版本 -->
-        </dependency>
+
     </dependencies>
 </project>

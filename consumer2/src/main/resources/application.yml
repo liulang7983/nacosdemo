@@ -1,0 +1,27 @@
+server:
+  port: 9002
+
+spring:
+  application:
+    name: consumer-service
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8869,127.0.0.1:8879,127.0.0.1:8889,127.0.0.1:8899
+        cluster-name: sz
+        #namespace: dev
+        group: DEFAULT_GROUP
+        username: nacos
+        password: nacos
+    #开启了则会同集群调用
+    loadbalancer:
+      nacos:
+        enabled: true
+        # 同集群优先权重，值越大优先级越高(此配置好像不需要)
+        same-cluster-first: true
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'

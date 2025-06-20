@@ -1,0 +1,22 @@
+server:
+  port: 8081
+
+spring:
+  application:
+    name: producer-service
+  cloud:
+    nacos:
+      server-addr: 127.0.0.1:8869,127.0.0.1:8879,127.0.0.1:8889,127.0.0.1:8899
+      discovery:
+        server-addr: 127.0.0.1:8869,127.0.0.1:8879,127.0.0.1:8889,127.0.0.1:8899
+        cluster-name: bj
+        #namespace: dev
+        group: DEFAULT_GROUP
+        username: nacos
+        password: nacos
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
